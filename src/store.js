@@ -71,7 +71,8 @@ const store = new Vuex.Store({
         mutation: 'addSubject',
         options: [
           {name: 'name', label: 'Name of the Subject', placeholder: 'e.G. Math'},
-          {name: 'teacher', label: 'Name of the teacher', placeholder: 'e.G. Mr. A'}
+          {name: 'teacher', label: 'Name of the teacher', placeholder: 'e.G. Mr. A'},
+          {name: 'color', label: 'Pick a color for the subject'}
         ]},
       { name: 'Class',
         mutation: 'addClass',
@@ -109,6 +110,7 @@ const store = new Vuex.Store({
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     daytimes: ['Morning', 'Noon', 'Afternoon', 'Evening', 'Night', 'Midnight'],
     hours: ['8:20-9:10', '9:10-10:00', '10:20-11:10', '11:10-12:00', '12:30-13:20', '13:20-14:10', '14:25-15:15', '15:15-16:05'],
+    colors: ['red', 'blue', 'green', 'yellow', 'orange', 'pink', 'purple'],
     calender: {
       subjectarray: {},
       sports: [],

@@ -20,9 +20,13 @@
         <option value="" selected disabled :key="-1">Change Class Time</option>
         <option v-for="(hour, index) in hours" :value="key" :key="index">{{hour}}</option>
       </select>
-      <select name="daytime" id="daytime" v-else-if="option.name === 'daytime'" required>
+      <select name="daytime" id="daytime" v-else-if="option.name === 'daytimes'" required>
         <option value="" selected disabled :key="-1">Change Daytime</option>
         <option v-for="(daytime, index) in daytimes" :value="key" :key="index">{{daytime}}</option>
+      </select>
+      <select name="color" id="color" v-else-if="option.name === 'color'" required>
+        <option value="" selected disabled :key="-1">Change Color</option>
+        <option v-for="(color, index) in colors" :value="key" :key="index">{{color}}</option>
       </select>
     </label>
   </div>
@@ -37,7 +41,8 @@
       ...mapState({
         subjects: state => state.calender.subjectarray,
         hours: state => state.hours,
-        daytimes: state => state.daytimes
+        daytimes: state => state.daytimes,
+        colors: state => state.colors
       })
     }
   }
